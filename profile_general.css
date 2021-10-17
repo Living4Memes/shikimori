@@ -1,0 +1,88 @@
+/* ==================== Скрытие элементов ==================== */
+
+#profiles_show .block.achievements {
+ display: none; 
+}
+
+
+/* 02 слева внизу */
+
+
+.Ssylki-anime-v-1-standard strong {
+    padding-bottom: 130%;
+}
+.p-profiles-show .b-feedback:after {
+  content: ''; /* "так надо" */
+  display: inline-block; /* не обязательно именно так, но "так надо" */
+  position: fixed; /* именно это свойство и его значение fixed
+                      и делает, чтобы изображение "прокручивалось" */
+  width: 300px; /* ширина изображения */
+  height: 300px; /* высота изображения */
+  left: 0px;  /* отступ справа, 0px значит, что отступа от правой границы нет*/
+  bottom: 0px; /* отступ снизу, 0px значит, что отступа от нижней границы нет*/
+  background: url("https://i.ibb.co/1ZbKkTR/02.png") no-repeat;
+  background-size: cover; /* размер изображения будет подгоняться так,
+                             чтобы занять всё пространство, которое 
+                             задают width и height */
+  z-index: 10; /* изображение становится выше всех по z координате,
+                  тем самым всё остальное находится под ним*/
+  pointer-events: none; /* мышь перестаёт замечать изображение */
+}
+
+
+/* ==================== Избранное и график ==================== */
+
+
+.p-profiles-show.x1200 .profile-content .c-left {
+ width: 100%; 
+}
+
+.p-profiles-show.x1200 .profile-content .c-right {
+ width: 100%; 
+}
+
+.bar.vertical .line {
+  max-width: 25px; /* Повлияет на другие графики на сайте */
+}
+
+/* Из топика */
+
+@media only screen and (min-width: 768px) {
+  .p-profiles-show .profile-content .cc-2 > .c-column {
+    width: 100%;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-left {
+    position: relative;
+    width: 77%;
+    padding-right: 30px;
+    margin-right: 0;
+    z-index: 1;
+  }
+
+  .p-profiles-show .lifetime {
+    margin-bottom: 15px;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-right {
+    float: none;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a {
+    width: 23%;
+    overflow: hidden;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column {
+    width: 100%;
+    margin: 0;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child {
+    margin-top: 15px;
+  }
+
+  .p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child {
+    clear: both;
+  }
+}
