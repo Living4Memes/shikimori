@@ -1,0 +1,69 @@
+/* ==================== Редактирование избранного ==================== */
+
+
+html:root {
+  --hrf1: url("https://i.ibb.co/MgZjJ5S/Darling-in-the-Fran-XX-2.jpg"); /* Darling in the FranXX */
+  --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");               /* Code Geas */
+  --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                   /* Naruto */
+  --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");          /* Attack on Titan */
+  --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
+  --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");             /* Demon Slayer */
+  --hrf7: url(""); /*  */
+}
+ 
+
+/* Darling in the FranXX */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="35849-darling-in-the-franxx"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter {
+ background: var(--hrf1) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter::before { content: "Милый во Франксе"; font-size: 12px; }
+
+/* Code Geas */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter {
+ background: var(--hrf2) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter::before { content: "Код Гиас"; font-size: 12px; }
+
+/* Naruto */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z1735-naruto-shippuuden"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter {
+ background: var(--hrf3) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter::before { content: "Наруто"; font-size: 12px; }
+
+/* Attack on Titan */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40028-shingeki-no-kyojin-the-final-season"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter {
+ background: var(--hrf4) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter::before { content: "Атака Титанов"; font-size: 12px; }
+
+/* Violet Evergarden */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33352-violet-evergarden"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter {
+ background: var(--hrf5) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter::before { content: "Вайолет Эвергарден"; font-size: 12px; }
+
+/* Demon SLayer */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z38000-kimetsu-no-yaiba"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter {
+ background: var(--hrf6) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter::before { content: "Клинок, рассекающий демонов"; font-size: 12px; }
+
+/*  */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+ background: var(--hrf7) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "/"; }
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: ""; font-size: 12px; }
