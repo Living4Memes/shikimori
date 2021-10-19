@@ -70,3 +70,4 @@ html:root {
 }
 .p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "/"; }
 .p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: ""; font-size: 12px; }
+
