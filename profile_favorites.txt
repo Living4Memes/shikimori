@@ -2,12 +2,12 @@
 
 
 html:root {
-  --hrf1: url("https://i.ibb.co/MgZjJ5S/Darling-in-the-Fran-XX-2.jpg"); /* Darling in the FranXX */
-  --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");               /* Code Geas */
-  --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                   /* Naruto */
-  --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");          /* Attack on Titan */
+  --hrf1: url("https://i.ibb.co/MgZjJ5S/Darling-in-the-Fran-XX-2.jpg");                            /* Darling in the FranXX */
+  --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");                                          /* Code Geas */
+  --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                                              /* Naruto */
+  --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");                                     /* Attack on Titan */
   --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
-  --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");             /* Demon Slayer */
+  --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
   --hrf7: url(""); /*  */
 }
  
