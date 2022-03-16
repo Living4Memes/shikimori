@@ -7,7 +7,9 @@ html:root {
   --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");                                     /* Attack on Titan */
   --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
   --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
-  --hrf7: url(""); /*  */
+  --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg"); 										   /* Your Lie in April */
+  --hrf8: url("https://i.ibb.co/q5GMVNn/Sorcery-fight.png"); 									   /* Sorcery Fight */
+  --hrf9: url(""); /*  */
 }
  
 
@@ -51,7 +53,7 @@ html:root {
 .p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-decor::before { content: "10/10"; }
 .p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter::before { content: "Вайолет Эвергарден"; font-size: 12px; }
 
-/* Demon SLayer */
+/* Demon Slayer */
 .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z38000-kimetsu-no-yaiba"] img { visibility: hidden; }
 .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter {
  background: var(--hrf6) no-repeat center / cover;
@@ -59,11 +61,27 @@ html:root {
 .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-decor::before { content: "9/10"; }
 .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter::before { content: "Клинок, рассекающий демонов"; font-size: 12px; }
 
-/*  */
+/*  Your Lie in April */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z23273-shigatsu-wa-kimi-no-uso"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter {
+ background: var(--hrf7) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter::before { content: "Твоя апрельская ложь"; font-size: 12px; }
+
+/* Sorcery fight */
 .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
 .p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
- background: var(--hrf7) no-repeat center / cover;
+ background: var(--hrf8) no-repeat center / cover;
 }
 .p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "/"; }
 .p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: ""; font-size: 12px; }
+
+/*  */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40748-jujutsu-kaisen-tv"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-cutter {
+ background: var(--hrf8) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-cutter::before { content: "Магическая битва"; font-size: 12px; }
 
