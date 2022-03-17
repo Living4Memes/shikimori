@@ -8,7 +8,7 @@ html:root {
   --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
   --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
   --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg");                                         /* Your Lie in April */
-  --hrf8: url("https://i.ibb.co/q5GMVNn/Sorcery-fight.png");                                       /* Sorcery Fight */
+  --hrf8: url("https://i.ibb.co/sy3L9ZC/Sorcery-fight.jpg");                                       /* Sorcery Fight */
   --hrf9: url(""); /*  */
 }
  
