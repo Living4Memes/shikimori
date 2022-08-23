@@ -5,7 +5,7 @@ html:root {
   --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");                                          /* Code Geas */
   --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                                              /* Naruto */
   --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");                                     /* Attack on Titan */
-  --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg1");        /* Violet Evergarden */
+  --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
   --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
   --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg");                                         /* Your Lie in April */
   --hrf8: url("https://i.ibb.co/sy3L9ZC/Sorcery-fight.jpg");                                       /* Sorcery Fight */
