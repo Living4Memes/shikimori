@@ -74,44 +74,44 @@ html:root {
 .p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter::before { content: "Твоя апрельская ложь"; font-size: 12px; }
 
 /* Sorcery fight */
-.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40748-jujutsu-kaisen-tv"] img { visibility: hidden; }
-.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-cutter {
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40748-jujutsu-kaisen"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter {
  background: var(--hrf8) no-repeat center / cover;
 }
-.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-decor::before { content: "9/10"; }
-.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen-tv"] .image-cutter::before { content: "Магическая битва"; font-size: 12px; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter::before { content: "Магическая битва"; font-size: 12px; }
 
 /* Great Teacher Onizuka */
-.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="245-great-teacher-onizuka"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter {
  background: var(--hrf9) no-repeat center / cover;
 }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "10/10"; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: "Крутой учитель Онидзука"; font-size: 12px; }
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter::before { content: "Крутой учитель Онидзука"; font-size: 12px; }
 
 /* Berserk */
-.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33-kenpuu-denki-berserk"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter {
  background: var(--hrf10) no-repeat center / cover;
 }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "10/10"; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: "Берсерк"; font-size: 12px; }
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter::before { content: "Берсерк"; font-size: 12px; }
 
 /* Samurai Champloo */
-.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="205-samurai-champloo"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter {
  background: var(--hrf11) no-repeat center / cover;
 }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "10/10"; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: "Самурай Чамплу"; font-size: 12px; }
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter::before { content: "Самурай Чамплу"; font-size: 12px; }
 
 /* Steins Gate */
-.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z9253-steins-gate"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter {
  background: var(--hrf12) no-repeat center / cover;
 }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "10/10"; }
-.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: "Врата Штейна"; font-size: 12px; }
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter::before { content: "Врата Штейна"; font-size: 12px; }
 
 /*  */
 .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
