@@ -9,7 +9,7 @@ html:root {
   --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
   --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg");                                         /* Your Lie in April */
   --hrf8: url("https://i.ibb.co/sy3L9ZC/Sorcery-fight.jpg");                                       /* Sorcery Fight */
-  --hrf9: url("https://i.ibb.co/Z1Yv51z/Great-teacher-Onizuka.jpg");                              /* Great teacher Onizuka */
+  --hrf9: url("https://i.ibb.co/Z1Yv51z/Great-teacher-Onizuka.jpg");                               /* Great teacher Onizuka */
   --hrf10: url("https://i.ibb.co/rxyNfMf/Berserk.jpg");                                            /* Berserk */
   --hrf11: url("https://i.ibb.co/T0Wh99g/Samurai-Champloo4.jpg");                                  /* Samurai Champloo */
   --hrf12: url("https://i.ibb.co/dKSDG3X/Steins-Gate.webp");                                       /* Steins Gate */
