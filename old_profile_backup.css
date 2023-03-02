@@ -1,0 +1,624 @@
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_1.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_2.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_3.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/main_code_4mob.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q03_history_bookmarks.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q04_mark_module_for_posters.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-04_quick-access-panel_0.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-05_slider_0.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/cosmo-library/q10-06_mega-slider_0.css");
+@import url("https://raw.githubusercontent.com/ed-main/ed-main.github.io/master/cssfiles/q09_favourite-anime-manga.css");
+@import url("https://raw.githubusercontent.com/Living4Memes/shikimori/main/profile_general.txt");    /* Общее редактирование профиля */
+
+
+
+@import url(https://css-club.web.app/css/compact_news--grid.css); /* Компактный вид новостей в две колонки на больших экранах */
+@import url(https://css-club.web.app/css/rate_module.min.css);    /* Модуль для постеров */
+@import url(https://css-club.web.app/css/fixed_cover.min.css);    /* Фиксированный размер обложек */
+
+
+
+
+
+body:after {
+  background-image: url(https://i.ibb.co/HFcqgSd/Darling-in-the-Fran-XX-2.jpg);
+}
+
+.l-footer:after {
+  content: "*Erosennin_profile*";
+  display: none !important;
+}
+
+@media screen and (min-width: 1px) {
+  .correct-mob-version {
+    color: normal;
+  }
+}
+
+.shikista {
+  color: white;
+}
+
+@media screen and (min-width: 1px) {
+  html:root {
+    --white-color: 255, 255, 255;
+    --light-color: 191, 197, 208;
+    --dark-color: 159, 169, 181;
+    --bright-color: 173, 191, 222;
+    --dull-color: 111, 123, 125;
+    --input-color: 100, 106, 115;
+    --hover-bottoms-1: 35, 37, 43;
+    --buttoms-color: 67, 82, 101;
+    --hover-buttoms-2: 156, 98, 25;
+    --very-high-rating: 144, 159, 179;
+    --high-rating: 108, 130, 146;
+    --average-rating: 83, 99, 115;
+    --small-rating: 57, 67, 78;
+    --time-filled: 74, 91, 103;
+    --time-empty: 28, 30, 33;
+    --anime-inprocess: 69, 146, 76;
+    --anime-complete: 41, 107, 47;
+    --manga-inprocess: 189, 15, 86;
+    --manga-complete: 153, 0, 62;
+    --hover-color: 210, 137, 45;
+    --shadows-color: 121, 140, 171;
+    --block-color: 65, 71, 82;
+    --menu-back: 40, 43, 49;
+    --nick-cover: 81, 94, 103;
+    --popup-color: 57, 63, 72;
+    --hundred: 1;
+  }
+}
+
+
+
+.counter-02 {text-align: center;}
+/* Карусель */
+.u-carousel {
+   display: inline-flex;
+   position: relative;
+   transition: none;
+   max-width: 1265px;
+   width: calc(100% / 1);
+   text-align: start;
+}
+/* Изображения */
+.u-carousel .u-carousel_images {
+   position: relative;
+   padding: 64% 0; /*Регулировка по высоте*/
+   margin: 0.5rem;
+   width: 100%;
+   height: 0;
+   overflow: hidden;
+   user-select: none;
+   transition: margin 0s, padding 0s;
+   border-radius: 0.25rem;
+   border: 2px solid rgba(var(--block-color), 0.3);
+   box-shadow: 0 2px 8px #00000033;
+}
+/* Контроль над самой картинкой */
+.u-carousel .b-image.b-poster img,
+.u-carousel .b-image img {
+   position: absolute;
+   min-width: 100%;
+   min-height: 100%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: 50% 50%;
+   transition: none !important;
+   box-shadow: none !important;
+   transform: none;
+   filter: brightness(0.95);
+ /*image-rendering: -webkit-optimize-contrast;*/
+   border-radius: 0;      
+}
+.u-carousel .u-carousel_images > div > .b-image,
+.u-carousel .u-carousel_images > div > .b-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    margin: 0;
+    transform: translateX(-100%);
+    transition: none;
+}
+.u-carousel .u-carousel_images > div > .b-image,
+.u-carousel .u-carousel_images > div > .b-poster { transform: translate(12px, 50%); opacity: 0;}
+.u-carousel .u-carousel_images > .active > .b-image,
+.u-carousel .u-carousel_images > .active > .b-poster { transform: translateX(0); opacity: 1;}
+.u-carousel .u-carousel_images > .active ~ div > .b-image,
+.u-carousel .u-carousel_images > .active ~ div > .b-poster { transform: translateX(100%);}
+
+.u-carousel.animated .u-carousel_images div > .b-image,
+.u-carousel.animated .u-carousel_images div > .b-poster {
+   transition: 0s linear, opacity .5s, transform 0.7s linear;
+   will-change: transform;
+}
+/* Переключатели */
+.u-carousel .u-carousel_images > div::before,
+.u-carousel .u-carousel_images > div::after {
+   content: "";
+   display: none;
+   justify-content: flex-end;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: 4.25rem;
+   font-size: 32px;
+   opacity: 1;
+   z-index: 1;
+   cursor: pointer;
+}
+.u-carousel .u-carousel_images .b-image:hover img { opacity: 1;}
+.u-carousel .u-carousel_images > div::after { right: 0; }
+
+.u-carousel .u-carousel_images > div:not(.active):first-child::after,
+.u-carousel .u-carousel_images > .active + div::after,
+.u-carousel .u-carousel_images > div::before,
+.u-carousel .u-carousel_images > .active:first-child ~ div:last-child::before { display: flex;}
+
+.u-carousel .u-carousel_images > br,
+.u-carousel .u-carousel_images > div > br,
+.u-carousel .u-carousel_images .b-image .marker,
+.u-carousel .u-carousel_images > .active::before,
+.u-carousel .u-carousel_images > .active ~ div::before { display: none;}
+
+/* Псевдо-переключатели */
+.u-carousel .u-carousel_images::before,
+.u-carousel .u-carousel_images::after {
+   content: "";
+   font-family: "shikimori";
+   position: absolute;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   box-sizing: border-box;
+   top: 0;
+   bottom: 0;
+   width: 4.0625rem;
+   padding: 1.25rem;
+   font-size: 3.25em;
+   background: linear-gradient(90deg, #0000004d, #00000000);
+   color: #1c1c1cf2;
+   opacity: 0;
+   transition: 0s ease-in-out, opacity .18s;
+   pointer-events: none;
+   z-index: 1;
+   font-weight: bold;
+}
+.u-carousel .u-carousel_images::after {
+   content: "";
+   justify-content: flex-end;
+   right: 0;
+   background: linear-gradient(270deg, #0000004d, #00000000);
+}
+.u-carousel .u-carousel_images:hover::before,
+.u-carousel .u-carousel_images:hover::after { opacity: 1;}
+/* Счётчик */
+.u-carousel.counter { counter-reset: carousel carousel-current;}
+.u-carousel.counter .u-carousel_images > div { counter-increment: carousel carousel-current;}
+.u-carousel.counter .u-carousel_images > .active ~ div { counter-increment: carousel carousel-current 0;}
+
+.u-carousel.counter::after { content: counter(carousel-current) " из " counter(carousel);
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 2em;
+   padding: .36em 1em;
+   background-color: #00000066;
+   border-radius: 5px;
+   color: #eee;
+   backface-visibility: hidden;
+   pointer-events: none;
+   z-index: 1;
+}
+@media screen and (min-width: 480px) {
+.u-carousel { width: calc(98% / 2);
+   }
+}
+@media screen and (min-width: 768px) {
+.u-carousel { width: calc(98% / 3);
+   }
+}
+@media screen and (min-width: 1000px) {
+.u-carousel { width: calc(98% / 4);
+   }
+}
+@media screen and (min-width: 1300px) {
+.u-carousel { width: calc(98% / 5);
+   }
+}
+
+.u-carousel .active > .b-image:after, .u-carousel .active > .b-poster:after {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 0.5rem 0rem;
+    line-height: 1.65;
+    font-size: 1.25em;
+    color: #f0f8ff;
+    pointer-events: none;
+    text-shadow: 1px 0 2px #000000bf, -1px 0 2px #000000bf, 0 1px 2px #000000bf, 0 -1px 2px #000000bf, 1px 0 2px #000000bf, -1px 0 2px #000000bf, 0 1px 2px #000000bf, 0 -1px 2px #000000bf;
+}
+
+.p-profiles .am-center-text {
+  text-align: center !important;
+  font-size: 35px !important;
+  padding-bottom: 0px !important;
+}
+
+#profiles_show .cc-favourites .c-column {
+    width: calc(100% / 4 - 1 * 1.1%) !important;
+}
+
+.p-profiles .cc-favourites .c-anime .image-cutter::before {
+    font-size: 16px !important;
+}
+
+
+/* ==================== Редактирование избранного ==================== */
+
+html:root {
+  --hrf1: url("https://i.ibb.co/MgZjJ5S/Darling-in-the-Fran-XX-2.jpg");                            /* Darling in the FranXX */
+  --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");                                          /* Code Geas */
+  --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                                              /* Naruto */
+  --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");                                     /* Attack on Titan */
+  --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
+  --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
+  --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg");                                         /* Your Lie in April */
+  --hrf8: url("https://i.ibb.co/sy3L9ZC/Sorcery-fight.jpg");                                       /* Sorcery Fight */
+  --hrf9: url("https://i.ibb.co/Z1Yv51z/Great-teacher-Onizuka.jpg");                               /* Great teacher Onizuka */
+  --hrf10: url("https://i.ibb.co/rxyNfMf/Berserk.jpg");                                            /* Berserk */
+  --hrf11: url("https://i.ibb.co/T0Wh99g/Samurai-Champloo4.jpg");                                  /* Samurai Champloo */
+  --hrf12: url("https://i.ibb.co/dKSDG3X/Steins-Gate.webp");                                       /* Steins Gate */
+  --hrf13: url(""); /*  */
+}
+ 
+
+/* Darling in the FranXX */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="35849-darling-in-the-franxx"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter {
+ background: var(--hrf1) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter::before { content: "Милый во Франксе"; font-size: 12px; }
+
+/* Code Geas */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter {
+ background: var(--hrf2) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter::before { content: "Код Гиас"; font-size: 12px; }
+
+/* Naruto */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z1735-naruto-shippuuden"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter {
+ background: var(--hrf3) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter::before { content: "Наруто"; font-size: 12px; }
+
+/* Attack on Titan */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40028-shingeki-no-kyojin-the-final-season"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter {
+ background: var(--hrf4) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter::before { content: "Атака Титанов"; font-size: 12px; }
+
+/* Violet Evergarden */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33352-violet-evergarden"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter {
+ background: var(--hrf5) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter::before { content: "Вайолет Эвергарден"; font-size: 12px; }
+
+/* Demon Slayer */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z38000-kimetsu-no-yaiba"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter {
+ background: var(--hrf6) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter::before { content: "Клинок, рассекающий демонов"; font-size: 12px; }
+
+/*  Your Lie in April */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z23273-shigatsu-wa-kimi-no-uso"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter {
+ background: var(--hrf7) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter::before { content: "Твоя апрельская ложь"; font-size: 12px; }
+
+/* Sorcery fight */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40748-jujutsu-kaisen"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter {
+ background: var(--hrf8) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-decor::before { content: "9/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter::before { content: "Магическая битва"; font-size: 12px; }
+
+/* Great Teacher Onizuka */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="245-great-teacher-onizuka"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter {
+ background: var(--hrf9) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter::before { content: "Крутой учитель Онидзука"; font-size: 12px; }
+
+/* Berserk */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33-kenpuu-denki-berserk"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter {
+ background: var(--hrf10) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter::before { content: "Берсерк"; font-size: 12px; }
+
+/* Samurai Champloo */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="205-samurai-champloo"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter {
+ background: var(--hrf11) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter::before { content: "Самурай Чамплу"; font-size: 12px; }
+
+/* Steins Gate */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z9253-steins-gate"] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter {
+ background: var(--hrf12) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-decor::before { content: "10/10"; }
+.p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter::before { content: "Врата Штейна"; font-size: 12px; }
+
+/*  */
+.p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+ background: var(--hrf13) no-repeat center / cover;
+}
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "/"; }
+.p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: ""; font-size: 12px; }
+
+/* ============================= Обо мне ============================= */
+.u-carousel:nth-child(2) .active:nth-child(1) .b-image:after{ content: "02"; }
+.u-carousel:nth-child(2) .active:nth-child(2) .b-image:after{ content: "02"; }
+.u-carousel:nth-child(3) .active:nth-child(1) .b-image:after{ content: "Макисе Курису"; }
+.u-carousel:nth-child(3) .active:nth-child(2) .b-image:after{ content: "Макисе Курису"; }
+.u-carousel:nth-child(3) .active:nth-child(3) .b-image:after{ content: "Макисе Курису"; }
+.u-carousel:nth-child(4) .active:nth-child(1) .b-image:after{ content: "Саша Блаус"; }
+.u-carousel:nth-child(4) .active:nth-child(2) .b-image:after{ content: "Саша Блаус"; }
+.u-carousel:nth-child(5) .active:nth-child(1) .b-image:after{ content: "Вайолет Евергарден"; }
+.u-carousel:nth-child(5) .active:nth-child(2) .b-image:after{ content: "Вайолет Евергарден"; }
+.u-carousel:nth-child(7) .active:nth-child(1) .b-image:after{ content: "Гатс"; }
+.u-carousel:nth-child(7) .active:nth-child(2) .b-image:after{ content: "Гатс"; }
+.u-carousel:nth-child(8) .active:nth-child(1) .b-image:after{ content: "Эйкичи Онидзука"; }
+.u-carousel:nth-child(8) .active:nth-child(2) .b-image:after{ content: "Эйкичи Онидзука"; }
+.u-carousel:nth-child(8) .active:nth-child(2) .b-image:after{ content: "Эйкичи Онидзука"; }
+.u-carousel:nth-child(9) .active:nth-child(1) .b-image:after{ content: "Джирайя"; }
+.u-carousel:nth-child(10) .active:nth-child(1) .b-image:after{ content: "Какаши Хатаке"; }
+.u-carousel:nth-child(10) .active:nth-child(2) .b-image:after{ content: "Какаши Хатаке"; }
+
+
+
+
+
+/* ==================== Редактирование избранного ==================== */
+
+html:root {
+    --hrf1: url("https://i.ibb.co/MgZjJ5S/Darling-in-the-Fran-XX-2.jpg");                            /* Darling in the FranXX */
+    --hrf2: url("https://i.ibb.co/XYhK23m/Code-Geass.jpg");                                          /* Code Geas */
+    --hrf3: url("https://i.ibb.co/YpY6mmZ/Naruto.jpg");                                              /* Naruto */
+    --hrf4: url("https://i.ibb.co/VpZzzfk/Attack-on-Titan.png");                                     /* Attack on Titan */
+    --hrf5: url("https://desu.shikimori.one/system/user_images/original/669760/1107748.jpg");        /* Violet Evergarden */
+    --hrf6: url("https://i.ibb.co/NNpdMp7/Demon-Slayer.jpg");                                        /* Demon Slayer */
+    --hrf7: url("https://i.ibb.co/RccbrxG/Kimi-no-uso.jpg");                                         /* Your Lie in April */
+    --hrf8: url("https://i.ibb.co/sy3L9ZC/Sorcery-fight.jpg");                                       /* Sorcery Fight */
+    --hrf9: url("https://i.ibb.co/Z1Yv51z/Great-teacher-Onizuka.jpg");                               /* Great teacher Onizuka */
+    --hrf10: url("https://i.ibb.co/rxyNfMf/Berserk.jpg");                                            /* Berserk */
+    --hrf11: url("https://i.ibb.co/T0Wh99g/Samurai-Champloo4.jpg");                                  /* Samurai Champloo */
+    --hrf12: url("https://i.ibb.co/dKSDG3X/Steins-Gate.webp");                                       /* Steins Gate */
+    --hrf13: url(""); /*  */
+  }
+   
+  
+  /* Darling in the FranXX */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="35849-darling-in-the-franxx"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter {
+   background: var(--hrf1) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-decor::before { content: "9/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="35849-darling-in-the-franxx"] .image-cutter::before { content: "Милый во Франксе"; font-size: 12px; }
+  
+  /* Code Geas */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter {
+   background: var(--hrf2) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="2904-code-geass-hangyaku-no-lelouch-r2"] .image-cutter::before { content: "Код Гиас"; font-size: 12px; }
+  
+  /* Naruto */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z1735-naruto-shippuuden"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter {
+   background: var(--hrf3) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="z1735-naruto-shippuuden"] .image-cutter::before { content: "Наруто"; font-size: 12px; }
+  
+  /* Attack on Titan */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40028-shingeki-no-kyojin-the-final-season"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter {
+   background: var(--hrf4) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-decor::before { content: "9/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="40028-shingeki-no-kyojin-the-final-season"] .image-cutter::before { content: "Атака Титанов"; font-size: 12px; }
+  
+  /* Violet Evergarden */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33352-violet-evergarden"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter {
+   background: var(--hrf5) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="33352-violet-evergarden"] .image-cutter::before { content: "Вайолет Эвергарден"; font-size: 12px; }
+  
+  /* Demon Slayer */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z38000-kimetsu-no-yaiba"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter {
+   background: var(--hrf6) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-decor::before { content: "9/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="z38000-kimetsu-no-yaiba"] .image-cutter::before { content: "Клинок, рассекающий демонов"; font-size: 12px; }
+  
+  /*  Your Lie in April */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z23273-shigatsu-wa-kimi-no-uso"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter {
+   background: var(--hrf7) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="z23273-shigatsu-wa-kimi-no-uso"] .image-cutter::before { content: "Твоя апрельская ложь"; font-size: 12px; }
+  
+  /* Sorcery fight */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="40748-jujutsu-kaisen"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter {
+   background: var(--hrf8) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-decor::before { content: "9/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="40748-jujutsu-kaisen"] .image-cutter::before { content: "Магическая битва"; font-size: 12px; }
+  
+  /* Great Teacher Onizuka */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="245-great-teacher-onizuka"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter {
+   background: var(--hrf9) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="245-great-teacher-onizuka"] .image-cutter::before { content: "Крутой учитель Онидзука"; font-size: 12px; }
+  
+  /* Berserk */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="33-kenpuu-denki-berserk"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter {
+   background: var(--hrf10) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="33-kenpuu-denki-berserk"] .image-cutter::before { content: "Берсерк"; font-size: 12px; }
+  
+  /* Samurai Champloo */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="205-samurai-champloo"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter {
+   background: var(--hrf11) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="205-samurai-champloo"] .image-cutter::before { content: "Самурай Чамплу"; font-size: 12px; }
+  
+  /* Steins Gate */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*="z9253-steins-gate"] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter {
+   background: var(--hrf12) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-decor::before { content: "10/10"; }
+  .p-profiles .cc-favourites .c-anime a[href*="z9253-steins-gate"] .image-cutter::before { content: "Врата Штейна"; font-size: 12px; }
+  
+  /*  */
+  .p-profiles .cc-favourites .c-anime[class*="b-catalog_entry"] > a[href*=""] img { visibility: hidden; }
+  .p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter {
+   background: var(--hrf13) no-repeat center / cover;
+  }
+  .p-profiles .cc-favourites .c-anime a[href*=""] .image-decor::before { content: "/"; }
+  .p-profiles .cc-favourites .c-anime a[href*=""] .image-cutter::before { content: ""; font-size: 12px; }
+  
+  /* ==================== Скрытие элементов ==================== */
+
+#profiles_show .block.achievements {
+    display: none; 
+   }
+   
+   
+   /* 02 слева внизу */
+   
+   
+   .Ssylki-anime-v-1-standard strong {
+       padding-bottom: 130%;
+   }
+   .p-profiles-show .b-feedback:after {
+     content: ''; /* "так надо" */
+     display: inline-block; /* не обязательно именно так, но "так надо" */
+     position: fixed; /* именно это свойство и его значение fixed
+                         и делает, чтобы изображение "прокручивалось" */
+     width: 300px; /* ширина изображения */
+     height: 300px; /* высота изображения */
+     left: 0px;  /* отступ справа, 0px значит, что отступа от правой границы нет*/
+     bottom: 0px; /* отступ снизу, 0px значит, что отступа от нижней границы нет*/
+     background: url("https://i.ibb.co/1ZbKkTR/02.png") no-repeat;
+     background-size: cover; /* размер изображения будет подгоняться так,
+                                чтобы занять всё пространство, которое 
+                                задают width и height */
+     z-index: 10; /* изображение становится выше всех по z координате,
+                     тем самым всё остальное находится под ним*/
+     pointer-events: none; /* мышь перестаёт замечать изображение */
+   }
+   
+   
+   /* ==================== Избранное и график ==================== */
+   
+   
+   .p-profiles-show.x1200 .profile-content .c-left {
+    width: 100%; 
+   }
+   
+   .p-profiles-show.x1200 .profile-content .c-right {
+    width: 100%; 
+   }
+   
+   .bar.vertical .line {
+     max-width: 25px; /* Повлияет на другие графики на сайте */
+   }
+   
+   /* Из топика */
+   
+   @media only screen and (min-width: 768px) {
+     .p-profiles-show .profile-content .cc-2 > .c-column {
+       width: 100%;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-left {
+       position: relative;
+       width: 77%;
+       padding-right: 30px;
+       margin-right: 0;
+       z-index: 1;
+     }
+   
+     .p-profiles-show .lifetime {
+       margin-bottom: 15px;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-right {
+       float: none;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a {
+       width: 23%;
+       overflow: hidden;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column {
+       width: 100%;
+       margin: 0;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child {
+       margin-top: 15px;
+     }
+   
+     .p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child {
+       clear: both;
+     }
+   }
+   
